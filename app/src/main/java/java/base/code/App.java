@@ -3,12 +3,33 @@
  */
 package java.base.code;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Scanner;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //Values
+        String name = "Name" ;
+        String hobby = "Hobby";
+        //Description genorator
+        System.out.println ("Hello, today we will be creating a brief description about you!");
+        System.out.println ("Please respond to the promts provided");
+        System.out.println ("What is your name?");
+        Scanner nameScanner = new Scanner(name);
+        nameScanner.close();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println ("How old are you?");
+        int age = scanner.nextInt();
+        scanner.close();
+        System.out.println ("What is your hobby?");
+        Scanner hobbyScanner = new Scanner(hobby);
+        hobbyScanner.close();
+        
+        //Description
+        if (age <= 20){
+            System.out.println("Hello, my name is" + name + "! I am " + age + " years old, a young Abult! I like to do " + hobby + ".");
+        } else {
+            System.out.println("Hello, my name is" + name + "! I am " + age + " years old, I am fully grown! I like to do " + hobby + ".");
+        }
+
     }
 }
