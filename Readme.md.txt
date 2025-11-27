@@ -1,1 +1,0 @@
-Basic text reader application for week 3 of coding lessons.
